@@ -29,9 +29,9 @@ public class WitherPoopCommand implements CommandExecutor {
         Player player = (Player) sender;
 
         if (player.hasPermission("poop.use")) {
-            Location l = player.getLocation();
-            World w = l.getWorld();
-            Entity wither = w.spawnEntity(l, EntityType.WITHER);
+            Location location = player.getLocation();
+            World world = location.getWorld();
+            Entity wither = world.spawnEntity(location, EntityType.WITHER);
             wither.setCustomName("Turd");
 
             return true;
