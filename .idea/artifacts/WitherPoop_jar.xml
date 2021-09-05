@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="WitherPoop:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/WitherPoop_jar</output-path>
+    <root id="archive" name="WitherPoop.jar">
+      <element id="module-output" name="WitherPoop" />
+    </root>
+  </artifact>
+</component>

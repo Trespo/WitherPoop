@@ -1,0 +1,10 @@
+name: WitherPoop
+version: 1.0.0
+author: Trespo
+main: me.trespo.witherpoop.WitherPoop
+description: "wither go poop haha funny"
+
+commands:
+  poop:
+    aliases: [feces]
+    description: "this makes a wither called turd spawn"
