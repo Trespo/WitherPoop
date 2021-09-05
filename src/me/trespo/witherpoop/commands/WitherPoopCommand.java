@@ -12,36 +12,29 @@ import org.bukkit.entity.Player;
 
 public class WitherPoopCommand implements CommandExecutor {
 
-    private WitherPoop plugin;
+
 
     public WitherPoopCommand(WitherPoop plugin) {
-        this.plugin = plugin;
         plugin.getCommand("poop").setExecutor(this);
     }
 
     @Override
     public boolean onCommand(CommandSender sender, Command cmd, String label, String[] args) {
 
-        Player p = (Player) sender;
-
-
-
         if (!(sender instanceof Player)){
             sender.sendMessage("Only Players may execute this command");
             return true;
         }
 
+        Player player = (Player) sender;
 
-        if (p.hasPermission("poop.use")) {
-            Location l = p.getLocation();
+        if (player.hasPermission("poop.use")) {
+            Location l = player.getLocation();
             World w = l.getWorld();
             Entity wither = w.spawnEntity(l, EntityType.WITHER);
             wither.setCustomName("Turd");
 
             return true;
-        }
-        else {
-            p.sendMessage("You do not have permission to enter this command");
         }
         return false;
 
